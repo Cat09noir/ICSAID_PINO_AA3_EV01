@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Framework CSS: Bootstrap 5 para componentes y controles responsivos. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas Pino | Accesorios Veterinarios y Productos para Mascotas</title>
+    <meta name="google-site-verification" content="tDju53JU-5xWJPITA0pu0_AshCO-w6zXBTkYNbeXjYQ" />
+    <meta name="description" content="Mascotas Pino ofrece venta especializada de accesorios e insumos para veterinarias. Productos de calidad para mascotas, atención rápida y contacto directo por WhatsApp.">
+    <meta name="keywords" content="accesorios veterinarios, insumos para mascotas, tienda veterinaria, productos para animales, artículos para veterinarias, venta de productos veterinarios, atención por WhatsApp, Mascotas Pino">
+   
+<!-- Open Graph para Facebook, WhatsApp y Google -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/rRH5BQ5X/logo.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/rRH5BQ5X/logo.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/rRH5BQ5X/logo.jpg">
+
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🐾</div>
+                <div class="logo-text">
+                    <h1>Mascotas Pino</h1>
+                    <p>Amor y cuidado para tus mascotas</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <a href="admin.html">Administrador</a>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero">
+            <h2>¡Bienvenido a Mascotas Pino! 🐶🐱</h2>
+            <p>Mascotas Pino es tu tienda de confianza para productos de calidad para tus mascotas: amor, cuidado y bienestar en cada compra.</p>
+            <a href="#productos" class="btn">Ver Catálogo</a>
+        </section>
+
+        <!-- SECCIÓN DE PRODUCTOS -->
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            
+            <div class="controls">
+  <div class="search-box">
+    <input class="form-control" id="searchInput" 
+    type="text" 
+    placeholder="🔍 Buscar productos..." 
+    oninput="aplicarFiltros()">
+  </div>
+
+  <div class="filter-box">
+    <select class="form-select" id="categoryFilter" onchange="aplicarFiltros()">
+        <option value="all">Todas las categorías</option>
+        <option value="ropa">Ropa</option>
+  <option value="collar">Collar italiano</option>
+  <option value="accesorios">Accesorios</option>
+  <option value="cadena">Cadena petrolizada</option>
+  <option value="camas">Camas</option>
+  <option value="pecheras">Pecheras</option>
+</select>
+
+    <select class="form-select" id="sortFilter" onchange="aplicarFiltros()">
+      <option value="none">Ordenar por…</option>
+      <option value="priceLow">Precio: menor a mayor</option>
+      <option value="priceHigh">Precio: mayor a menor</option>
+    </select>
+  </div>
+</div>
+
+
+                </div>
+            </div>
+
+            <div id="productsContainer" class="products-grid"></div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Mascotas Pino</h3>
+                <p>Tu tienda de confianza para el bienestar de tus mascotas.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📱 WhatsApp: +57 3143837012</p>
+                <p>📍 Ubicación: Bogotá, Colombia.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="TikTok">🎵</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+    <script src="js/admin.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- Librerías para PDF / PNG (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-3sV5m1jzQGkqov0v6pU6b0X2x6Kk4L4s9xw6Qq2AqH3KdE1p2g6qYyI+uYJ8u8Zx3DkXx0D2v1q1E1b2m3n4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNa5s2Hbmq2m+7dX3GZkJ4Qv6J3y1yq8b9XgQF5s2Tqz0/4c3z2Y8l1mMfvL1hx6ZZA7V0A3FzjKk3D1y9s1ag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Carrito: inserta este bloque (panel + botón flotante) -->
+<!-- CART BUTTON -->
+<button id="cartToggleBtn" class="cart-toggle" aria-label="Abrir carrito">🛒 <span id="cartCount">0</span></button>
+
+<!-- CART PANEL -->
+<aside id="cartPanel" class="cart-panel" aria-hidden="true">
+  <div class="cart-header">
+    <h3>Tu carrito</h3>
+    <button id="closeCartBtn" class="cart-close">✕</button>
+  </div>
+
+  <div id="cartItems" class="cart-items">
+    <!-- items se renderizan aquí -->
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-summary">
+      <div>Subtotal</div>
+      <div id="cartSubtotal">$0</div>
+    </div>
+
+    <div class="cart-actions">
+      <button onclick="procesarPago()">Finalizar Compra</button>
+
+    </div>
+  </div>
+</aside>
+
+</body>
+</html>
