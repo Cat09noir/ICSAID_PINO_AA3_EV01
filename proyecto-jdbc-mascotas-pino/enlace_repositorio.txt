@@ -1,4 +1,4 @@
 Repositorio GitHub del proyecto Mascotas Pino:
-https://github.com/Tupaginaweb9/proyecto-jdbc-mascotas-pino
+https://github.com/Cat09noir/proyecto-jdbc-mascotas-pino
 
 Nota: publicar los cambios de esta evidencia con git add, git commit y git push, y comprobar que el enlace abre correctamente.
